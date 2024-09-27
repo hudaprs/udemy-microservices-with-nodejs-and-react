@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: post
+  template:
+    metadata:
+      labels:
+        app: post
+    spec:
+      containers:
+        - name: post
+          image: hudaprasetyo/post
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: post-srv
+spec:
+  type: NodePort
+  selector:
+    app: post
+  ports:
+    - name: post
+      protocol: TCP
+      port: 4000
+      targetPort: 4000

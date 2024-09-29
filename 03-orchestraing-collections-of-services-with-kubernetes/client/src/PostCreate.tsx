@@ -7,7 +7,7 @@ const PostCreate = () => {
 	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 
-		await axios.post('http://localhost:4000/posts', {
+		await axios.post('http://udemy-post.com/posts/create', {
 			title
 		})
 

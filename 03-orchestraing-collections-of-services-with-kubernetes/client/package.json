@@ -5,7 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "bunx --bun vite",
-		"build": "tsc -b && vite build",
+		"build": "bunx --bun vite build",
+		"start": "bunx --bun vite --port 3000 --host 0.0.0.0",
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},

@@ -11,7 +11,7 @@ const CommentCreate = ({ postId }: CommentCreateProps) => {
 	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 
-		await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
+		await axios.post(`http://udemy-post.com/posts/${postId}/comments`, {
 			content
 		})
 

@@ -1,0 +1,19 @@
+{
+	"name": "auth",
+	"module": "src/index.ts",
+	"devDependencies": {
+		"@types/bun": "latest",
+		"@types/express": "^5.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"dev": "bun --hot ./src/index.ts",
+		"start": "bun run ./src/index.ts"
+	},
+	"type": "module",
+	"dependencies": {
+		"express": "^4.21.0"
+	}
+}

@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { signUp } from './sign-up.router';
-import { signIn } from './sign-in.router';
-import { signOut } from './sign-out.router';
-import { me } from './me.router';
+import { signUp } from './routes/sign-up.router';
+import { signIn } from './routes/sign-in.router';
+import { signOut } from './routes/sign-out.router';
+import { me } from './routes/me.router';
 
 const authRouterV1 = Router();
 

@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended", // Use recommended rules from @typescript-eslint/eslint-plugin
+    "prettier" // Use Prettier for code formatting, which disables conflicting ESLint rules
+  ],
+  "parser": "@typescript-eslint/parser", // Specifies the parser to be @typescript-eslint/parser for TypeScript code
+  "plugins": [
+    "@typescript-eslint", // Adds @typescript-eslint plugin for TypeScript specific linting rules
+    "prettier" // Adds Prettier plugin for integrating Prettier with ESLint
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "useTabs": false,
+        "tabWidth": 2,
+        "semi": false
+      }
+    ], // Enforces Prettier formatting as an ESLint error
+    "@typescript-eslint/consistent-type-imports": "error", // Enforces consistent usage of type imports
+    "@typescript-eslint/no-explicit-any": "error", // Disallows usage of the `any` type
+    "@typescript-eslint/no-unused-vars": "error", // Disallows unused variables
+    "@typescript-eslint/no-empty-function": "error", // Disallows empty functions
+    "func-style": ["error", "expression"], // Enforces the use of function expressions for defining functions
+    "no-redeclare": "error",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true, // Ignores case while sorting imports
+        "ignoreDeclarationSort": true, // Ignores sorting of import declarations
+        "ignoreMemberSort": false // Enforces sorting of members within import declarations
+      }
+    ]
+  }
+}
